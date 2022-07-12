@@ -30,7 +30,7 @@ ul, li {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 200px 1fr;
   grid-template-areas: 
     "sidebar header"
@@ -68,7 +68,77 @@ ul, li {
   display: grid;
   grid-area: header;
   align-items: center;
-  background-color: aqua;
+  background-color: white;
+  padding: 0px 25px 0px 25px;
+}
+
+.search-notifications {
+  display: grid;
+  grid-template-columns: 2fr 0.75fr;
+  justify-content: center;
+}
+
+.search-container {
+  align-self: center;
+}
+
+.search-container input {
+  width: 60%;
+  line-height: 1.75rem;
+  background-color: rgb(230, 230, 230);
+  border-radius: 1rem;
+  border: none;
+}
+
+.notification-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: start;
+  align-self: center;
+}
+
+.name-menu {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "avatar greeting new upload share"
+    "avatar name new upload share";
+  justify-items: start;
+  align-items: start;
+}
+
+.name-menu-user-avatar {
+  grid-area: avatar;
+}
+
+.greeting {
+  grid-area: greeting;
+  place-self: start;
+}
+
+.name-menu-user-name {
+  grid-area: name;
+  place-self: start;
+}
+
+.new-button {
+  grid-area: new;
+}
+
+.upload-button {
+  grid-area: upload;
+}
+
+.share-button {
+  grid-area: share;
+}
+
+.name-menu button {
+  padding: 5px;
+  border-radius: 15px;
+  width: 100px;
+  justify-self: center;
 }
 
 .main-content {
