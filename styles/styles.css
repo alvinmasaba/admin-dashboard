@@ -36,7 +36,7 @@ img {
 .sidebar {
   grid-area: sidebar;
   display: grid;
-  grid-template-rows: 1fr 3fr 6fr;
+  grid-template-rows: 77px 325px auto;
   background-color: rgb(0, 153, 255);
   padding: 25px;
   color: white;
@@ -66,6 +66,7 @@ img {
   row-gap: 25px;
   padding-left: 10px;
   padding-bottom: 50px;
+  max-height: 325px;
 }
 
 
@@ -78,34 +79,35 @@ img {
   grid-area: header;
   align-items: center;
   background-color: white;
-  padding: 0px 50px 0px 50px;
+  box-shadow: 3px 3px 6px rgb(160, 160, 160);
+  padding: 1% 7.5% 0.5% 7.5%;
   min-width: 1000px;
 }
 
 .search-notifications {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.2fr 1fr;
   justify-content: center;
 }
 
 .search-container {
-  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 12fr;
 }
 
 .search-container input {
   width: 85%;
-  line-height: 1.75rem;
+  line-height: 1.9rem;
   background-color: rgb(230, 230, 230);
   border-radius: 1rem;
   border: none;
-  margin-left: 25px;
+  
 }
 
 .notification-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
-  align-self: center;
 }
 
 .notification-icons > img {
@@ -113,18 +115,19 @@ img {
 }
 .name-menu {
   display: grid;
-  grid-template-columns: 0.75fr 5fr 1fr 1fr 1fr;
+  grid-template-columns: 0.6fr 5fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
     "avatar greeting new upload share"
     "avatar name new upload share";
   justify-items: start;
   align-items: center;
-  column-gap: 20px;
 }
 
 .name-menu-user-avatar {
   grid-area: avatar;
+  height: 60px;
+  width: 60px;
 }
 
 .greeting {
@@ -162,7 +165,6 @@ img {
 .main-content {
   display: grid;
   grid-area: main;
-  background-color: pink;
   grid-template-columns: 3fr 1fr;
   gap: 25px;
   padding: 25px;
@@ -178,20 +180,21 @@ img {
   grid-template-rows: 25px auto;
   grid-row: 1 / 3;
   gap: 10px;
+  min-width: 825px;
 }
 
 .project-cards-display {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
   gap: 25px;
+  justify-content: center;
 }
 
 .project-card {
   text-align: center;
   border-left: 10px solid rgb(255, 238, 0);
-  min-height: 150px;
+  min-height: 200px;
 }
 
 .announcements {
@@ -206,6 +209,8 @@ img {
   text-align: start;
   gap: 5px;
   padding: 30px;
+  justify-self: flex-start;
+  max-height: 400px;
 }
 
 .announcements-card > div > p {
@@ -219,17 +224,20 @@ hr {
 
 .trending {
   grid-column: 2 / 3;
+  grid-row: 2 / 3;
   display: grid;
   grid-template-rows: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+  align-self: flex-end;
 }
 
 .trending-card {
   text-align: start;
-  padding: 20px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .trending-card div {
@@ -243,8 +251,9 @@ hr {
   flex-direction: column;
   text-align: start;
   margin-left: 1.5rem;
+  align-self: flex-start;
 }
 
-.twitter p {
+.twitter p, .twitter a {
   align-self: flex-start;
 }
