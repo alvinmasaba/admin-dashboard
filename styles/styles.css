@@ -1,3 +1,6 @@
+/* Font families */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto&family=Heebo&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +8,8 @@
 
 body {
   width: 100%;
+  font-family: 'Barlow Condensed', 'Heebo', Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 }
 
 ul, li {
@@ -68,7 +73,7 @@ img {
   padding-left: 10px;
   padding-bottom: 50px;
   max-height: 325px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 550;
 }
 
@@ -86,7 +91,7 @@ li {
   align-items: center;
   background-color: white;
   box-shadow: 3px 3px 6px rgb(160, 160, 160);
-  padding: 1% 7.5% 0.5% 7.5%;
+  padding: 1% 7.5% 7.5% 7.5%;
   min-width: 1000px;
   z-index: 1;
 }
@@ -113,11 +118,11 @@ li {
 
 .notification-icons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1fr;
   place-items: center end;
   width: 400px;
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .notification-icons > img:nth-of-type(2) {
@@ -148,11 +153,18 @@ li {
   grid-area: greeting;
   place-self: end start;
   padding-bottom: 5px;
-  font-weight: 550;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .name-menu-user-name {
   grid-area: name;
+  font-size: 2rem;
+}
+
+.name-menu-user-name a {
+  text-decoration: none;
+  color: black;
 }
 
 .new-button {
@@ -176,8 +188,7 @@ li {
   background-color: rgb(0, 153, 255);
   color: white;
   border: none;
-  font-size: 15px;
-  font-weight: 550;
+  font-size: 16px;
 }
 
 .main-content {
@@ -191,7 +202,11 @@ li {
 }
 
 .main-content h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.main-content h2 {
+  font-size: 1.55rem;
 }
 
 .projects {
@@ -236,6 +251,7 @@ li {
 .project-card p {
   align-self: flex-start;
   color: rgb(145, 145, 145);
+  font-size: 1.1rem;
 }
 
 .announcements {
@@ -250,12 +266,18 @@ li {
   text-align: start;
   gap: 5px;
   padding: 30px;
+  padding-top: 50px;
   justify-self: flex-start;
-  max-height: 400px;
+  height: 350px;
+}
+
+.announcements-card h1 {
+  font-size: 1.1rem;
 }
 
 .announcements-card > div > p {
   color: rgb(145, 145, 145);
+  font-size: 1rem;
 }
 
 hr {
@@ -293,6 +315,7 @@ hr {
   text-align: start;
   margin-left: 10px;
   align-self: flex-start;
+  font-size: 1.1rem;
 }
 
 .twitter p, .twitter a {
