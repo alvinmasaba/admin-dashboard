@@ -1,4 +1,5 @@
 /* Font families */
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto&family=Heebo&display=swap');
 
 * {
@@ -6,26 +7,13 @@
   padding: 0;
 }
 
+html,
 body {
+  min-height: 100vh;
+  overflow: auto;
   width: 100%;
   font-family: 'Barlow Condensed', 'Heebo', Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-}
-
-ul, li {
-  list-style-type: none;
-}
-
-img {
-  height: 25px;
-  width: auto;
-}
-
-.card {
-  border: 2px solid white;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 3px 3px 6px rgb(160, 160, 160);
 }
 
 .container {
@@ -37,6 +25,28 @@ img {
     "sidebar header"
     "sidebar main";
 }
+
+/* Global icon size */
+
+img {
+  height: 25px;
+  width: auto;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+/* Global card styling */
+
+.card {
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgb(160, 160, 160);
+}
+
+/* SIDEBAR STYLING */
 
 .sidebar {
   grid-area: sidebar;
@@ -84,6 +94,8 @@ li {
 .site-info {
   align-self: start;
 }
+
+/* HEADER STYLING */
 
 .header {
   display: grid;
@@ -167,6 +179,8 @@ li {
   color: black;
 }
 
+/* Header button styling */
+
 .new-button {
   grid-area: new;
 }
@@ -188,8 +202,11 @@ li {
   background-color: #649173;
   color: white;
   border: none;
-  font-size: 16px;
+  font-size: 17px;
+  font-family: 'Roboto';
 }
+
+/* MAIN CONTENT STYLING */
 
 .main-content {
   display: grid;
@@ -208,6 +225,8 @@ li {
 .main-content h2 {
   font-size: 1.55rem;
 }
+
+/* Projects field styling */
 
 .projects {
   display: grid;
@@ -254,6 +273,8 @@ li {
   font-size: 1.1rem;
 }
 
+/* Announcements card styling */
+
 .announcements {
   display: grid;
   grid-template-rows: 25px;
@@ -284,6 +305,8 @@ hr {
   border: none;
   border-top: 1px solid lightgray;
 }
+
+/* Trending card styling */
 
 .trending {
   grid-column: 2 / 3;
