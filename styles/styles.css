@@ -254,8 +254,8 @@ input:focus {
 }
 
 .project-card {
-  border-right: 2.5px solid #918f018f;
-  border-bottom: 2.5px solid #918f018f;
+  border-right: 2.5px solid #f2bc0f;
+  border-bottom: 2.5px solid #f2bc0f;
   min-height: 200px;
   display: grid;
   place-items: center start;
