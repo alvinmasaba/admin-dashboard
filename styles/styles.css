@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto&family=Heebo&display=swap');
 
+/* Global variables */
+
+:root {
+  --yellow: #f2bc0f;
+  --dark-yellow: #ad880d;
+  --green: #649173;
+  --project-card-border: 2.5px solid #f2bc0f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +61,7 @@ ul, li {
   grid-area: sidebar;
   display: grid;
   grid-template-rows: 77px 325px auto;
-  background-color: #649173;
+  background-color: var(--green, #649173);
   padding: 25px;
   color: white;
   min-width: 275px;
@@ -134,7 +143,7 @@ li {
 
 input:focus {
   outline: auto;
-  outline-color: #649173;
+  outline-color: var(--green, #649173);
 }
 
 .notification-icons {
@@ -208,12 +217,25 @@ input:focus {
   padding: 10px;
   border-radius: 1.5rem;
   width: 100px;
-  background-color: #649173;
+  background-color: var(--green, #649173);
   color: white;
   border: none;
   font-size: 17px;
   font-family: 'Roboto';
 }
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--yellow, gold);
+}
+
+button:active {
+  background-color: var(--dark-yellow, --yellow);
+  transition-duration: 8ms;
+  padding: 8px;
+  width: 95px;
+}
+
 
 /* MAIN CONTENT STYLING */
 
@@ -254,13 +276,19 @@ input:focus {
 }
 
 .project-card {
-  border-right: 2.5px solid #f2bc0f;
-  border-bottom: 2.5px solid #f2bc0f;
+  border-right: var(--project-card-border, 2.5px solid green);
+  border-bottom: var(--project-card-border, 2.5px solid green);
   min-height: 200px;
   display: grid;
   place-items: center start;
   padding-left: 2rem;
   padding-right: 1.5rem;
+}
+
+.project-card:hover {
+  width: 92%;
+  height: 100%;
+  z-index: 1;
 }
 
 .project-card .buttons {
